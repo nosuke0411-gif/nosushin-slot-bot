@@ -294,3 +294,7 @@ async def balance(interaction: discord.Interaction):
     user_id = str(interaction.user.id)
     coins = user_coins.get(user_id, STARTING_COINS)
     await interaction.response.send_message(f"💰 あなたのコイン残高は {coins} コインだよ！")
+import os
+
+TOKEN = os.getenv("YOUR_BOT_TOKEN")
+bot.run(TOKEN)
